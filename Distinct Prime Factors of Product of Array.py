@@ -91,6 +91,6 @@
 
 					j+=6
 					
-				if n >3:
+				if n >3:					# because we have checked for 2 and 3 now, minimum value in the end for n will be >3
 					a.add(n)
 			return len(a)
