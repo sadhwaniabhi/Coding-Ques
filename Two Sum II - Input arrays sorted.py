@@ -70,3 +70,26 @@ class Solution:
         
         else:
            first += 1
+
+
+
+"""
+***Improvements in above approach(TC= O(n), SC = O(1))***
+-> Since, it's given in question that the test cases are generated that there is one possible solution then,
+   instead of running while loop till first < last we can run it till numbers[first] + numbers[last] != target
+
+"""
+class Solution:
+   def twosum(self, numbers: List[int], target: int) -> List(int):
+      first = 0
+      last = len(numbers) - 1
+
+      while numbers[first] + numbers[last] != target:
+               
+        if numbers[first] + numbers[last] > target:
+           last -= 1
+        
+        else:
+           first += 1
+
+      return [first+1, last+1]
